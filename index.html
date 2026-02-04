@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feirão de Descontos - Consultar Agora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(217,91%,15%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(224,71%,20%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(250,89%,15%,1) 0, transparent 50%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="max-w-md w-full glass-card p-8 md:p-10 text-center transform transition-all duration-500 hover:scale-[1.01]">
+        <!-- Badge de Urgência -->
+        <div class="flex justify-center mb-6">
+            <span class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest border border-blue-100">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                </span>
+                Acesso Exclusivo
+            </span>
+        </div>
+
+        <!-- Título -->
+        <div class="mb-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                Ofertas Disponíveis no <span class="gradient-text">Portal!</span>
+            </h1>
+            <p class="text-slate-500 mt-4 text-base md:text-lg font-medium">
+                Verifique o seu limite de desconto personalizado agora mesmo.
+            </p>
+        </div>
+
+        <!-- Botão de Ação -->
+        <div id="actionSection" class="space-y-6">
+            <div class="relative group">
+                <a href="https://1painelacessofeirao.shop/" 
+                   class="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-5 px-6 rounded-2xl transition-all duration-300 pulse-button flex items-center justify-center gap-3 no-underline text-xl shadow-xl hover:shadow-blue-500/30 active:scale-95">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                    </svg>
+                    CONSULTAR AGORA
+                </a>
+            </div>
+            
+            <!-- Caixa de Destaque -->
+            <div class="bg-blue-50/50 rounded-2xl p-5 border border-blue-100 flex items-start gap-4 text-left">
+                <div class="bg-white p-2 rounded-lg shadow-sm">
+                    <span class="text-2xl text-blue-600">🛡️</span>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-slate-800 uppercase tracking-tight">Portal Verificado</h4>
+                    <p class="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                        Sistema atualizado em tempo real. Descontos válidos por apenas <span class="font-bold text-blue-600">24 horas</span> após a consulta.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Rodapé Discreto -->
+            <div class="pt-4 border-t border-slate-100">
+                <div class="flex items-center justify-center gap-2 text-slate-400 text-[10px] uppercase font-bold tracking-[0.2em]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                    </svg>
+                    Conexão Encriptada 256-bit
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
